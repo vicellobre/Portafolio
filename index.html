@@ -40,15 +40,24 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-          <li><a class="nav-link scrollto " href="#work">Mis Proyectos</a></li>
-          <li><a class="nav-link scrollto " href="#workCL">Mis Trabajos</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contáctame</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+              <li><a class="nav-link scrollto" href="#about">Sobre mí</a></li>
+              <li><a class="nav-link scrollto " href="#work">Videojuegos</a></li>
+              <li><a class="nav-link scrollto " href="#workCL">Simuladores</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contáctame</a></li>
+              <li class="dropdown"><a href="#"><span>Idioma</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="index.html">Español</a></li>
+                  <li><a href="index-en.html">Inglés</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+      </div>
 
     </div>
   </header><!-- End Header -->
@@ -69,6 +78,38 @@
   </div><!-- End Hero Section -->
 
   <main id="main">
+    
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        Sobre mí
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      Soy un desarrollador con experiencia en la realización de proyectos en Unity y C#. Me encuentro culminando la carrera de Ciencias de la Computación, en la cual aprendí todo lo fundamental en cuanto a programación, lógica algorítmica, matemáticas, álgebra, bases de datos, redes, entre otros. A lo largo de mi carrera he realizado proyectos con diversos lenguajes de programación, entre ellos C, C++ y Python.
+                    </p>
+                    <p class="lead">
+                      s conceptos y técnicas para diseñar y desarrollar videojuegos completos en Unity, gracias a estos cursos pude desarrollar diversos proyectos personales, y además conseguir una posición como desarrollador de Unity en una empresa dedicada al desarrollo de simuladores educativos. 
+                    </p>
+                    <p class="lead">
+                      Actualmente sigo creciendo en el desarrollo de videojuegos y estoy en búsqueda de nuevos retos para así aprender y aplicar tecnologías más avanzadas en Unity tales como realidad aumentada y realidad virtual.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route">
@@ -77,10 +118,11 @@
           <div class="col-sm-12">
             <div class="title-box text-center">
               <h3 class="title-a">
-                PORTAFOLIO
+                Videojuegos
               </h3>
               <p class="subtitle-a">
-                En esta sección puedes ver y probar mis trabajos realizados en Unity.
+                <!--In this section, you can see and test my games developed with Unity-->
+                En esta sección puedes ver y probar mis proyectos realizados en Unity.
               </p>
               <div class="line-mf"></div>
             </div>
@@ -99,6 +141,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Flappy Bird</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/Flappy-Birds" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
@@ -124,6 +167,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Bloques</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/Bloques" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
@@ -148,12 +192,38 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Tetris</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/Tetris" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
                       <a href="https://vicellobre.github.io/Tetris/" target="_blank"> <span class="bi bi-play"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/videos/space-shooter.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/work-8.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Space Shooter 3D (Android)</h2>
+                    <div class="w-more">
+                      <!--Go to repository-->
+                      <a href="https://github.com/vicellobre/SpaceShooter3D" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <a href="https://mega.nz/file/YwJFVYyA#WVtohUn2I6owAHYVTd41xxIZKQrZwgxOU-90vM0hWiI" target="_blank"> <span class="bi bi-download"></span></a>
                     </div>
                   </div>
                 </div>
@@ -172,6 +242,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">WackyBreakout</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/WackyBreakout" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
@@ -196,6 +267,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">Asteroids</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/Asteroids" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
@@ -221,6 +293,7 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">SpaceShooter</h2>
                     <div class="w-more">
+                      <!--Go to repository-->
                       <a href="https://github.com/vicellobre/SpaceShooter" target="_blank"><span class="w-ctegory">Ir al repositorio</span></a>
                     </div>
                   </div>
@@ -244,8 +317,10 @@
           <div class="col-sm-12">
             <div class="title-box text-center">
               <h3 class="title-a">
-                Trabajos realizados para clientes
+                <!-- Projects done for clients-->
+                Simuladores
               </h3>
+              <!--- In addition to my personal projects, I have developed several simulators for CloudLabs as part of my job as a Unity Developer at Toro-Labs. -->
               <p class="subtitle-a">
                 Además de mis proyectos personales, he participado en la realización de una gran cantidad de simuladores para CloudLabs como parte de mi trabajo como Unity Developer en Toro-Labs.
               </p>
@@ -253,28 +328,299 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
+
+
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="https://youtu.be/9ZZ1ljj5o7A" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/work-7.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <!-- Projects with CloudLabs-->
+                      <h2 class="w-title">Proyectos con CloudLabs</h2>
+                    </div>
+                    <div class="col-sm-4">
+
+                      <div class="w-more">
+                        <a href="https://www.youtube.com/watch?v=9ZZ1ljj5o7A" target="_blank"><span class="w-ctegory">Ver en youtube</span></a>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/1_arrancador_estrella_delta.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/1_arrancador_estrella_delta.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!--Star-delta starter simulator-->
+                      <h2 class="w-title">Arrancador Estrella Delta</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/2_arrancador_suave.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/2_arrancador_suave.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!--Soft engine starter simulator-->
+                      <h2 class="w-title">Arrancador Suave</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/3_quimica_ensayos_preliminares.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/3_quimica_ensayos_preliminares.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!--Preliminary test simulator-->
+                      <h2 class="w-title">Química - Ensayos Preliminares</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/4_reguladores_elementos_proteccion.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/4_reguladores_elementos_proteccion.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Protection Systems and Regulators-->
+                      <h2 class="w-title">Reguladores y elementos de protección</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/5_estufa_electrica.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/5_estufa_electrica.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Let's build an electric stove-->
+                      <h2 class="w-title">Construyendo una estufa eléctrica</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/6_formando_animales_zoologico.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/6_formando_animales_zoologico.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Making zoo animals-->
+                      <h2 class="w-title">Formando animales en el zoológico</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/7_pozo_de_agua.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/7_pozo_de_agua.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- The water well-->
+                      <h2 class="w-title">El pozo de agua</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/8_fabrica_de_dulces.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/8_fabrica_de_dulces.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Candy factory-->
+                      <h2 class="w-title">Fábrica de dulces</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/9_puente_de_plastico.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/9_puente_de_plastico.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Plastic bridge-->
+                      <h2 class="w-title">Puente de plástico</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/10_piedra_papel_y_tijera.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/10_piedra_papel_y_tijera.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- Rock paper scissors-->
+                      <h2 class="w-title">Piedra, papel o tijera</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+              <div class="work-box">
+                <a href="assets/img/11_posicion_astronomica.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                  <div class="work-img">
+                    <img src="assets/img/11_posicion_astronomica.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- What is astronomical position?-->
+                      <h2 class="w-title">¿Qué es la posición astronómica?</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+
+          <div class="col-md-4">
             <div class="work-box">
-              <a href="https://youtu.be/9ZZ1ljj5o7A" data-gallery="portfolioGallery" class="portfolio-lightbox">
+              <a href="assets/img/12_ley_de_gauss.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="assets/img/work-7.jpg" alt="" class="img-fluid">
+                  <img src="assets/img/12_ley_de_gauss.jpg" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
                 <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Proyectos con CloudLabs</h2>
-                    <div class="w-more">
-                      <a href="https://www.youtube.com/watch?v=9ZZ1ljj5o7A" target="_blank"><span class="w-ctegory">Ver en youtube</span></a>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-12">
+                    <!-- Gauss's law-->
+                    <h2 class="w-title">Ley de Gauss</h2>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/13_sistema_fotovoltaico.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/13_sistema_fotovoltaico.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- Network interconnected photovoltaic system  -->
+                    <h2 class="w-title">Sistema fotovoltaico interconectado a la red</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/14_evaluacion_de_desempeno.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="assets/img/14_evaluacion_de_desempeno.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <!-- Performance evaluation  -->
+                    <h2 class="w-title">Evaluación de desempeño</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
 
 
         </div>

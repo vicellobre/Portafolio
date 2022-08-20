@@ -1481,3 +1481,30 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Lenguaje
+--------------------------------------------------------------*/
+
+.select-language img{
+  height: 20px;
+}
+
+.select-language{
+  display: flex;
+  flex-direction: row;
+}
+
+.select-language > div{
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.language-selected{
+  border: 1px solid #ffffff;
+}
+
+.select-language > div:hover{
+  border: 1px solid #ffffff;
+  transition: border 1s ease; 
+}
