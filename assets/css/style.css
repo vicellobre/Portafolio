@@ -21,6 +21,25 @@ h5,
 h6 {
   color: #1e1e1e;
 }
+ 
+.skill-item img{
+  margin-top: 4px;
+  width: auto;
+  height: 30px;
+}
+
+.skill-item{
+  text-align: center;
+  border: #6e6e6e solid 1px;
+  margin: 4px;
+}
+
+.skill-item h5{
+  float: right;
+  padding: 0px 5px;
+  margin-top: 5px;
+}
+
 
 a {
   color: #1e1e1e;
@@ -89,7 +108,7 @@ a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
+  background-position: right center;
 }
 
 @media (max-width: 1024px) {
@@ -890,6 +909,12 @@ a:hover {
 
 .service-box .service-ico {
   margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.service-ico img{
+  width: 60%;
+  height: auto;
   color: #1e1e1e;
 }
 
