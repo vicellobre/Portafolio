@@ -1,0 +1,11 @@
+{
+  "name": "portafolio-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize-images": "node optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
