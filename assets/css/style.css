@@ -764,6 +764,10 @@ a:hover {
   }
 }
 
+.hero-actions .btn {
+  margin-bottom: 0.5rem;
+}
+
 .hero .text-slider-items {
   display: none;
 }
