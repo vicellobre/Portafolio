@@ -1,0 +1,41 @@
+name: Validate site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - '.htmlvalidate.json'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - '**.html'
+      - '.htmlvalidate.json'
+      - '.github/workflows/validate.yml'
+
+jobs:
+  html-validate:
+    name: HTML validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate HTML
+        run: npx --yes html-validate@9.7.0 index.html index-en.html
+
+  seo-files:
+    name: SEO files check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify sitemap and robots.txt
+        run: |
+          test -f sitemap.xml
+          test -f robots.txt
+          grep -q 'sitemap.xml' robots.txt
+          grep -q 'vicellobre.github.io/Portafolio' sitemap.xml

@@ -17,6 +17,9 @@ Portafolio personal desplegado en GitHub Pages. Presenta perfil profesional, hab
 ```
 ├── index.html          # Versión en español
 ├── index-en.html       # Versión en inglés
+├── sitemap.xml         # Mapa del sitio para buscadores
+├── robots.txt          # Directivas para crawlers
+├── .htmlvalidate.json  # Configuración de validación HTML (CI)
 ├── assets/
 │   ├── css/style.css   # Estilos principales
 │   ├── js/main.js      # Navegación, scroll, lightbox, typed
@@ -53,6 +56,29 @@ El script comprime JPG/PNG, genera variantes WebP y actualiza `index.html` e `in
 ## Despliegue
 
 El sitio se publica automáticamente desde la rama `main` vía **GitHub Pages** del repositorio [vicellobre/Portafolio](https://github.com/vicellobre/Portafolio).
+
+## SEO y calidad
+
+- `sitemap.xml` y `robots.txt` en la raíz del sitio
+- Datos estructurados JSON-LD (`Person` + `WebSite`) en el `<head>` de ambos HTML
+- Workflow `.github/workflows/validate.yml`: validación HTML en push/PR a `main`
+
+Validar HTML localmente:
+
+```bash
+npx html-validate index.html index-en.html
+```
+
+**Baseline Lighthouse (móvil, jun 2026 — sitio en producción):**
+
+| Categoría | Puntuación | Objetivo plan |
+|-----------|------------|---------------|
+| Performance | 96 | ≥ 85 |
+| Accessibility | 94 | ≥ 90 |
+| Best Practices | 100 | — |
+| SEO | 100 | ≥ 95 |
+
+Tras desplegar esta fase, conviene re-ejecutar Lighthouse para confirmar que JSON-LD y sitemap no introducen regresiones.
 
 ## Licencia de plantilla
 

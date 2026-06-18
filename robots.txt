@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vicellobre.github.io/Portafolio/sitemap.xml
