@@ -37,7 +37,7 @@ todos:
     status: pending
   - id: contenido-backend-imgs
     content: "Reemplazar imágenes placeholder de proyectos backend (CoWorkingApp, Enjoy API, BaseProject) por capturas reales"
-    status: pending
+    status: completed
   - id: fase4-seo
     content: sitemap.xml, robots.txt, JSON-LD y auditoría Lighthouse
     status: completed
