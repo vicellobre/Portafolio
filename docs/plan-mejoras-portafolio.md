@@ -16,7 +16,7 @@ todos:
     status: completed
   - id: fase2-ddd-logo
     content: Crear logo propio para DDD y reemplazar logo_cleana.png (usado temporalmente en ES/EN)
-    status: pending
+    status: completed
   - id: fase2-readme
     content: Ampliar README con descripción, estructura y guía de edición
     status: completed
