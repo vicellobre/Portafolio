@@ -1,6 +1,6 @@
 ---
 name: Plan mejoras portafolio
-overview: Plan por fases para consolidar las mejoras del portafolio. Fases 1–4 completadas en HTML estático. Próximas 2 semanas: actualizaciones de contenido (CV bilingüe, imágenes backend, itch.io, Enjoy frontend). Fase 5 (Eleventy + GitHub Actions) planificada para después — build y deploy automáticos sin compilar en local.
+overview: Plan por fases del portafolio. Fases 1–4 completadas; inglés como idioma principal (x-default); BaseProject con imagen A en ES y B en EN. Pendiente CV bilingüe, itch.io, Enjoy y Fase 5 Eleventy + GitHub Actions.
 todos:
   - id: fase1-commit
     content: Commit y merge de mejoras-revision-portafolio a main + verificación en GitHub Pages
@@ -38,6 +38,9 @@ todos:
   - id: contenido-backend-imgs
     content: "Reemplazar imágenes placeholder de proyectos backend (CoWorkingApp, Enjoy API, BaseProject) por capturas reales"
     status: completed
+  - id: contenido-baseproject-img
+    content: "BaseProject por idioma: ES = banner template (A), EN = diagrama arquitectura (B)"
+    status: completed
   - id: fase4-seo
     content: sitemap.xml, robots.txt, JSON-LD y auditoría Lighthouse
     status: completed
@@ -53,21 +56,41 @@ isProject: false
 
 ## Estado actual
 
-**Rama activa:** `main` (Fases 1–4 mergeadas — commit `1ea53ab`)
+**Rama activa:** `main` (último commit relevante: `29fcb0f`)
 
-**Fase 4 aplicada:**
-- `sitemap.xml` con hreflang ES/EN/x-default
-- `robots.txt` con referencia al sitemap
-- JSON-LD `Person` + `WebSite` en `index.html` e `index-en.html`
-- `hreflang="x-default"` en ambos HTML
-- Workflow CI `.github/workflows/validate.yml` (HTML + verificación SEO)
-- Baseline Lighthouse móvil: Performance 96, A11y 94, Best Practices 100, SEO 100
+**Sitio en vivo:** https://vicellobre.github.io/Portafolio/
 
-**Ventana de contenido (próximas ~2 semanas):** varias actualizaciones previstas antes de Fase 5 — conviene hacerlas en HTML estático ahora y migrar a Eleventy después.
+### Completado recientemente
 
-**Pendiente inmediato:** logo DDD (`fase2-ddd-logo`), CV bilingüe, imágenes backend, proyecto itch.io, frontend Enjoy.
+| Área | Detalle |
+|------|---------|
+| **Fases 1–4** | SEO, vendor, WebP, backend, hero, CI validate, Lighthouse baseline |
+| **Imágenes backend** | `coworking-app`, `enjoy-api`, `base-project` en `#workBackend` (ES/EN) |
+| **Logo DDD** | `logo_ddd.png` / `.webp` (duplicado de Clean Architecture; skill DDD separada) |
+| **Botones GitHub** | Juegos Unity + proyectos backend |
+| **Categorías simuladores** | Corregidas por área académica/profesional |
+| **Plan versionado** | `docs/plan-mejoras-portafolio.md` en el repo |
+| **Idioma principal** | Inglés — `hreflang="x-default"` → `index-en.html` (HTML, sitemap) |
+| **BaseProject por idioma** | ES → opción A (banner); EN → opción B (diagrama arquitectura) |
 
-**Planificado (después):** Fase 5 Eleventy con GitHub Actions para no compilar en local.
+### BaseProject — decisión aplicada
+
+| Idioma | Opción | Archivos | Descripción |
+|--------|--------|----------|-------------|
+| **ES** (`index.html`) | **A** | `base-project.png` / `.webp` | Banner .NET 10 TEMPLATE |
+| **EN** (`index-en.html`) | **B** | `base-project-architecture.png` / `.webp` | Diagrama Clean Architecture / DDD / CQRS |
+
+Archivos duplicados conservados: `base-project-en.*` (copia de opción A). Si tras un deploy no ves el cambio, usar recarga forzada (`Ctrl+F5`) — GitHub Pages y el navegador cachean imágenes con la misma URL.
+
+### Pendiente inmediato
+
+1. CV bilingüe (`fase3-cv`)
+2. Proyecto itch.io (`contenido-itch`)
+3. Frontend Enjoy (`contenido-enjoy-front`)
+
+### Planificado (después)
+
+Fase 5 Eleventy + GitHub Actions (build/deploy automático, sin compilar en local).
 
 ---
 
@@ -82,11 +105,9 @@ flowchart LR
   end
   subgraph content [Proximas 2 semanas]
     CV[CV ES + EN]
-    BackendImg[Imagenes backend]
     Itch[Proyecto itch.io]
     Enjoy[Frontend Enjoy]
     CV --> HTML
-    BackendImg --> HTML
     Itch --> HTML
     Enjoy --> HTML
   end
@@ -146,17 +167,17 @@ Prioridad por peso (carpeta `assets/img/`, ~7 MB):
 - Generar variantes WebP y usar `<picture>` con fallback JPG
 - Mantener sin lazy load: `foto.png`, `hero-bg.jpg` (above the fold)
 - Revisar `assets/videos/space-shooter.mp4` — valorar thumbnail + enlace externo si pesa mucho
-- **Logo DDD:** crear `assets/img/logo_ddd.png` y reemplazar el uso temporal de `logo_cleana.png` en la skill DDD (ES/EN)
+- **Logo DDD:** `logo_ddd.png` — hecho (duplicado de `logo_cleana`; skill DDD en ES/EN)
 
 ### 2.3 Ajustes HTML/CSS menores
 
 - Corregir jerarquía de encabezados: secciones `h3.title-a` → tarjetas `h3` en lugar de `h2` en servicios y proyectos
 - Añadir `aria-label` a iconos sociales sin texto (`LinkedIn`, `WhatsApp`, `GitHub`)
-- Evaluar eliminar o acortar el preloader en `assets/js/main.js` — en sitios estáticos suele restar más que sumar
+- Evaluar eliminar o acortar el preloader en [`assets/js/main.js`](d:\Proyectos\Portafolio\Portafolio\assets\js\main.js) — en sitios estáticos suele restar más que sumar
 
 ### 2.4 Documentación
 
-Ampliar `README.md`:
+Ampliar [`README.md`](d:\Proyectos\Portafolio\Portafolio\README.md):
 - Descripción del proyecto y screenshot
 - Stack y estructura de carpetas
 - Cómo editar contenido (ES vs EN)
@@ -191,7 +212,7 @@ Si no tienes demos públicas, basta con repos de GitHub + descripción de arquit
 
 ### 3.2 Proyectos destacados en el hero
 
-En la sección hero de `index.html`:
+En la sección hero de [`index.html`](d:\Proyectos\Portafolio\Portafolio\index.html):
 
 - 2 CTAs: "Ver proyectos backend" → `#workBackend`, "Ver videojuegos" → `#work`
 - Enlace "Descargar CV" en hero → PDF según idioma (**demo actual; pendiente CV ES + EN**)
@@ -243,24 +264,18 @@ Actualizaciones previstas **antes** de Fase 5. Se harán sobre HTML estático ac
 | ID | Tarea | Detalle | Bloqueado por |
 |----|-------|---------|---------------|
 | `fase3-cv` | CV bilingüe | PDF ES + PDF EN; botón del hero apunta al idioma correcto | Usuario prepara PDFs |
-| `contenido-backend-imgs` | Imágenes backend | Sustituir placeholders genéricos por capturas reales de cada proyecto (ver tabla abajo) | Usuario prepara capturas |
 | `contenido-itch` | Proyecto itch.io | Nueva tarjeta en `#work`: nombre, captura, enlace itch.io, stack, botón GitHub si aplica | URL/captura del juego en itch.io |
 | `contenido-enjoy-front` | Frontend Enjoy API | Sustituir modal de mantenimiento por enlace demo real; actualizar descripción/captura si cambia | Frontend Enjoy terminado |
-| `fase2-ddd-logo` | Logo DDD | Reemplazar `logo_cleana.png` temporal | Usuario crea logo |
 
-### Imágenes backend — reemplazos pendientes
+### Imágenes backend — estado
 
-Las tarjetas de `#workBackend` usan imágenes genéricas del template. Sustituir por capturas propias y regenerar WebP con `scripts/optimize-images.mjs`:
+| Proyecto | ES | EN | Estado |
+|----------|----|----|--------|
+| CoWorkingApp | `coworking-app.*` | `coworking-app.*` | Hecho |
+| Enjoy API | `enjoy-api.*` | `enjoy-api.*` | Hecho |
+| BaseProject | `base-project.*` (opción A) | `base-project-architecture.*` (opción B) | Hecho |
 
-| Proyecto | Imagen actual (placeholder) | Imagen propuesta | Sugerencia de captura |
-|----------|------------------------------|------------------|------------------------|
-| CoWorkingApp | `assets/img/backend.png` | `assets/img/coworking-app.png` | Swagger UI, diagrama de arquitectura o pantalla de la API en Azure |
-| Enjoy API (ChistesAPI) | `assets/img/software2.png` | `assets/img/enjoy-api.png` | Swagger, cobertura de tests o frontend cuando esté listo |
-| BaseProject | `assets/img/proyecto.png` | `assets/img/base-project.png` | Estructura de carpetas Clean Architecture o README renderizado |
-
-Tras añadir los PNG/JPG, ejecutar `npm run optimize-images` en `scripts/` para generar `.webp` y actualizar `<picture>` en `index.html` e `index-en.html`.
-
-**Orden sugerido:** CV → imágenes backend → itch.io → Enjoy (cuando esté listo) → logo DDD. Fase 5 cuando el contenido esté estable.
+**Orden sugerido:** CV → itch.io → Enjoy → Fase 5.
 
 ---
 
@@ -362,8 +377,7 @@ gantt
     SEO_avanzado_Fase4        :f4, after f3, 1d
   section Contenido_proximas_2sem
     CV_bilingue              :c1, 2026-06-18, 5d
-    Imagenes_backend         :c1b, after c1, 2d
-    Proyecto_itch_io         :c2, after c1b, 3d
+    Proyecto_itch_io         :c2, after c1, 3d
     Enjoy_frontend           :c3, after c2, 5d
   section Fase5_despues
     Eleventy_migracion       :f5, after c3, 2d
@@ -376,7 +390,6 @@ gantt
 | P1 | Fase 2 — Limpieza + imágenes | Medio | Alto (performance) |
 | P2 | Fase 3 — Sección backend + hero | Medio | Alto (empleabilidad) |
 | P2 | Contenido — CV bilingüe | Bajo | Alto (empleabilidad) |
-| P2 | Contenido — imágenes backend | Bajo | Medio (presentación) |
 | P2 | Contenido — proyecto itch.io | Bajo | Medio |
 | P2 | Contenido — frontend Enjoy | Bajo | Medio |
 | P3 | Fase 4 — SEO avanzado + Lighthouse | Bajo | Medio |
@@ -388,12 +401,10 @@ gantt
 
 **Ahora (próximas 2 semanas — HTML estático):**
 1. Preparar y subir **CV en español e inglés** (`cv-vicente-llobregat-es.pdf` / `-en.pdf`)
-2. **Reemplazar imágenes de backend** — capturas reales para CoWorkingApp, Enjoy API y BaseProject
-3. Añadir **proyecto de itch.io** a videojuegos (pasar URL, captura y nombre cuando esté listo)
-4. **Actualizar Enjoy** cuando el frontend esté terminado (demo real, quitar modal)
-5. Crear **logo DDD** propio (`fase2-ddd-logo`)
+2. Añadir **proyecto de itch.io** a videojuegos (pasar URL, captura y nombre cuando esté listo)
+3. **Actualizar Enjoy** cuando el frontend esté terminado (demo real, quitar modal)
 
 **Después (Fase 5 — sesión dedicada):**
-6. Migrar a **Eleventy** con datos en JSON
-7. Configurar **GitHub Actions** para build + deploy automático (sin compilar en local)
-8. Cambiar GitHub Pages a publicación vía workflow
+4. Migrar a **Eleventy** con datos en JSON
+5. Configurar **GitHub Actions** para build + deploy automático (sin compilar en local)
+6. Cambiar GitHub Pages a publicación vía workflow
