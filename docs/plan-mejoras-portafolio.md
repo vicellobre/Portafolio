@@ -56,7 +56,7 @@ isProject: false
 
 ## Estado actual
 
-**Rama activa:** `main` (último commit relevante: `29fcb0f`)
+**Rama activa:** `main` (último commit: `2bd9719`)
 
 **Sitio en vivo:** https://vicellobre.github.io/Portafolio/
 
@@ -65,7 +65,7 @@ isProject: false
 | Área | Detalle |
 |------|---------|
 | **Fases 1–4** | SEO, vendor, WebP, backend, hero, CI validate, Lighthouse baseline |
-| **Imágenes backend** | `coworking-app`, `enjoy-api`, `base-project` en `#workBackend` (ES/EN) |
+| **Imágenes backend** | `coworking-app`, `enjoy-api` (branding Enjoy App), `base-project` en `#workBackend` |
 | **Logo DDD** | `logo_ddd.png` / `.webp` (duplicado de Clean Architecture; skill DDD separada) |
 | **Botones GitHub** | Juegos Unity + proyectos backend |
 | **Categorías simuladores** | Corregidas por área académica/profesional |
@@ -88,9 +88,9 @@ Archivos duplicados conservados: `base-project-en.*` (copia de opción A). Si tr
 2. Proyecto itch.io (`contenido-itch`)
 3. Frontend Enjoy (`contenido-enjoy-front`)
 
-### Planificado (después)
+### Planificado (después del bloque de contenido)
 
-Fase 5 Eleventy + GitHub Actions (build/deploy automático, sin compilar en local).
+Fase 5 Eleventy + GitHub Actions — **después** de Enjoy front, CV e itch.io (evitar migrar contenido aún inestable).
 
 ---
 
