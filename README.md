@@ -20,6 +20,8 @@ Portafolio personal desplegado en GitHub Pages. Presenta perfil profesional, hab
 ├── sitemap.xml         # Mapa del sitio para buscadores
 ├── robots.txt          # Directivas para crawlers
 ├── .htmlvalidate.json  # Configuración de validación HTML (CI)
+├── .gitignore          # Ignorar node_modules, OS, secretos, etc.
+├── .gitattributes      # EOL LF + binarios
 ├── assets/
 │   ├── css/style.css   # Estilos principales
 │   ├── js/main.js      # Navegación, scroll, lightbox, typed
@@ -28,6 +30,14 @@ Portafolio personal desplegado en GitHub Pages. Presenta perfil profesional, hab
 │   └── vendor/         # Dependencias mínimas (Bootstrap, GLightbox, Typed)
 └── scripts/            # Herramientas de mantenimiento (optimización de imágenes)
 ```
+
+## Proyectos relacionados
+
+| Repo | Descripción |
+|------|-------------|
+| [EnjoyAPI](https://github.com/vicellobre/EnjoyAPI) | API .NET del demo Enjoy |
+| [EnjoyClient](https://github.com/vicellobre/EnjoyClient) | SPA Angular + Firebase Hosting |
+| Demo Enjoy | [enjoy-portfolio.web.app](https://enjoy-portfolio.web.app) |
 
 ## Editar contenido
 
