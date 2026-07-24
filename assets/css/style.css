@@ -938,7 +938,15 @@ a:hover {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio-mf .row > [class*="col-"] {
+  display: flex;
+}
+
 .work-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -952,13 +960,18 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
 }
 
 .work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: all 1s;
 }
 
 .work-content {
+  flex: 1 1 auto;
   padding: 2rem 3% 1rem 4%;
 }
 
@@ -996,8 +1009,11 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: flex-start;
   gap: 0.35rem;
   float: right;
+  /* Reserva espacio de 2 iconos para igualar tarjetas con/sin repo */
+  min-height: calc(2.5rem * 2 + 0.35rem);
 }
 
 .work-content .w-like.w-actions a {
