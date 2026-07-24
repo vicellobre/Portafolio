@@ -35,9 +35,7 @@ Portafolio personal desplegado en GitHub Pages. Presenta perfil profesional, hab
 
 | Repo | Descripción |
 |------|-------------|
-| [EnjoyAPI](https://github.com/vicellobre/EnjoyAPI) | API .NET del demo Enjoy |
-| [EnjoyClient](https://github.com/vicellobre/EnjoyClient) | SPA Angular + Firebase Hosting |
-| Demo Enjoy | [enjoy-portfolio.web.app](https://enjoy-portfolio.web.app) |
+| Demo Enjoy | [enjoy-portfolio.web.app](https://enjoy-portfolio.web.app) (código privado) |
 | Demo Pollito | [vicellobre.itch.io/pollito](https://vicellobre.itch.io/pollito) (código privado) |
 
 ## Editar contenido
