@@ -938,8 +938,8 @@ a:hover {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-/* Solo columnas del grid de tarjetas (no col-sm-* internas del contenido) */
-.portfolio-mf > .container > .row > [class*="col-"] {
+/* Solo columnas de tarjetas (no el col-sm-12 del título de sección) */
+.portfolio-mf > .container > .row > .col-md-4 {
   display: flex;
   margin-bottom: 3rem;
 }
