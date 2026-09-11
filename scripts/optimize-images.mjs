@@ -65,8 +65,9 @@ for (const htmlPath of htmlFiles) {
       'g'
     );
 
-    html = html.replace(imgTagRegex, (match, before, after) => {
-      if (match.includes('<picture')) return match;
+    html = html.replace(imgTagRegex, (match, before, after, offset) => {
+      const ahead = html.slice(Math.max(0, offset - 120), offset);
+      if (ahead.includes('<picture') && !ahead.includes('</picture>')) return match;
       const lazy = skipLazy.has(name) ? '' : ' loading="lazy"';
       const attrs = `${before}src="${src}"${after}`.replace(/\s*loading="lazy"/, '');
       return `<picture><source srcset="${webpSrc}" type="image/webp"><img${attrs}${lazy}></picture>`;
